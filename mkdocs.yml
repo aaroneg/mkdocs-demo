@@ -1,0 +1,46 @@
+site_name: Documentation Demo
+site_url: https://docs-test.ag-labs.net
+theme:
+  name: material
+  logo: logo.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+#    - navigation.tabs
+  palette:
+  # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+      primary: black
+      accent: yellow
+nav:
+  - Home: index.md
+  - 'Divisions':
+    - Coho Winery: divisions/coho-winery/index.md
+    - Fabrikam: divisions/fabrikam/index.md
+    - Northwind Traders: divisions/northwind-traders.md
+    - Tailspin Toys: divisions/tailspin-toys.md
+
+plugins:
+  - include-markdown
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
